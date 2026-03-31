@@ -1,0 +1,69 @@
+# OS noise
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+agents.md
+!AGENTS.md
+!CLAUDE.md
+
+# Logs and temp files
+*.log
+*.tmp
+*.temp
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Claude Code local config
+.claude/settings.local.json
+.claude/settings.local.yaml
+.claude/settings.local.yml
+
+# Dependency and package caches
+node_modules/
+.pnpm-store/
+.npm/
+.yarn/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Rust
+target/
+
+# Go
+bin/
+pkg/
+
+# Generic build outputs
+build/
+dist/
+out/
+release/
+debug/
+bin/
+obj/
+
+# Local app runtime state
+.claw-links/
+runtime/
+artifacts/
+browser/
+profile/
+tmp/
+
+# Platform-specific local app data mirrors
+ClawLinks/
+discord-link/

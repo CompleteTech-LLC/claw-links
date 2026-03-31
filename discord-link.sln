@@ -1,0 +1,47 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72D-47B6-A68D-7590B98EB39B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0AB3BF05-4346-4AA6-1389-037BE0695223}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{07C2787E-EAC7-C090-1BA3-A61EC2A24D84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClawLinks.Launcher", "src\ClawLinks.Launcher\ClawLinks.Launcher.csproj", "{ED4A6983-B87A-25B4-DEE1-12622CD765EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClawLinks.Launcher.Tests", "tests\ClawLinks.Launcher.Tests\ClawLinks.Launcher.Tests.csproj", "{E896F4C6-3505-66A5-0D58-5F36E68A2397}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClawLinks.BrowserStub", "tools\ClawLinks.BrowserStub\ClawLinks.BrowserStub.csproj", "{F053F97C-B937-9CF4-7680-9D58793FBB2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED4A6983-B87A-25B4-DEE1-12622CD765EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED4A6983-B87A-25B4-DEE1-12622CD765EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED4A6983-B87A-25B4-DEE1-12622CD765EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED4A6983-B87A-25B4-DEE1-12622CD765EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E896F4C6-3505-66A5-0D58-5F36E68A2397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E896F4C6-3505-66A5-0D58-5F36E68A2397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E896F4C6-3505-66A5-0D58-5F36E68A2397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E896F4C6-3505-66A5-0D58-5F36E68A2397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F053F97C-B937-9CF4-7680-9D58793FBB2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F053F97C-B937-9CF4-7680-9D58793FBB2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F053F97C-B937-9CF4-7680-9D58793FBB2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F053F97C-B937-9CF4-7680-9D58793FBB2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ED4A6983-B87A-25B4-DEE1-12622CD765EA} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{E896F4C6-3505-66A5-0D58-5F36E68A2397} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{F053F97C-B937-9CF4-7680-9D58793FBB2E} = {07C2787E-EAC7-C090-1BA3-A61EC2A24D84}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52F8AB8B-D51A-46DB-988A-381185FE8ED6}
+	EndGlobalSection
+EndGlobal

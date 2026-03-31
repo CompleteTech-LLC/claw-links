@@ -1,0 +1,61 @@
+{
+  "policies": {
+    "DisableFirefoxAccounts": true,
+    "DisableTelemetry": true,
+    "DisableFirefoxStudies": true,
+    "OfferToSaveLogins": false,
+    "PasswordManagerEnabled": false,
+    "HttpsOnlyMode": "force_enabled",
+    "PromptForDownloadLocation": true,
+    "StartDownloadsInTempDirectory": true,
+    "EnableTrackingProtection": {
+      "Value": true,
+      "Locked": true,
+      "Cryptomining": true,
+      "Fingerprinting": true,
+      "EmailTracking": true,
+      "Category": "strict"
+    },
+    "Permissions": {
+      "Camera": {
+        "BlockNewRequests": true,
+        "Locked": true
+      },
+      "Microphone": {
+        "BlockNewRequests": true,
+        "Locked": true
+      },
+      "Location": {
+        "BlockNewRequests": true,
+        "Locked": true
+      },
+      "Notifications": {
+        "BlockNewRequests": true,
+        "Locked": true
+      },
+      "ScreenShare": {
+        "BlockNewRequests": true,
+        "Locked": true
+      },
+      "Autoplay": {
+        "Default": "block-audio-video",
+        "Locked": true
+      }
+    },
+    "SanitizeOnShutdown": {
+      "Cache": true,
+      "Cookies": true,
+      "FormData": true,
+      "History": true,
+      "Sessions": true,
+      "SiteSettings": true,
+      "Locked": true
+    },
+    "ExtensionSettings": {
+      "*": {
+        "blocked_install_message": "This browser profile only allows app-approved extensions.",
+        "installation_mode": "blocked"
+      }
+    }
+  }
+}
