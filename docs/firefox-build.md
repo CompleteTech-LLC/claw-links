@@ -98,8 +98,15 @@ The launcher project should treat the browser runtime as a versioned embedded de
 
 For Windows specifically, the first real browser artifact contract is a portable `.zip` archive that expands to a runnable browser directory and is then installed by [packaging/windows/Install-WindowsBrowserBundle.ps1](/Users/timot/Documents/projects/discord-link/packaging/windows/Install-WindowsBrowserBundle.ps1). The expected artifact shape is documented in [docs/windows-bundle-artifact.md](/Users/timot/Documents/projects/discord-link/docs/windows-bundle-artifact.md).
 
+The build-side archive packaging step now has a local script entry point at [packaging/windows/New-WindowsBrowserArchive.ps1](/Users/timot/Documents/projects/discord-link/packaging/windows/New-WindowsBrowserArchive.ps1). It packages a prepared Windows browser directory into the expected ESR zip artifact and writes a metadata sidecar for release/install handoff.
+
+Use `-RuntimeValidationMode strict` for real Firefox-derived outputs and CI so packaging fails when required runtime markers are missing or when app-owned policy/profile artifacts leak into the browser payload.
+
+The higher-level Windows build orchestration entry point now lives at [packaging/windows/Start-WindowsFirefoxEsrBuild.ps1](/Users/timot/Documents/projects/discord-link/packaging/windows/Start-WindowsFirefoxEsrBuild.ps1). It prepares the `mozconfig` and MozillaBuild-shell helper needed to run `mach build`, `mach package`, and the final Claw Links archive packaging step.
+
 ## Build policy for this project
 
+- track Firefox `esr` first for the initial Windows bundle line
 - build from a pinned upstream Firefox release tag or commit
 - track Mozilla stable or ESR releases closely
 - publish source availability for the MPL-covered portions we redistribute
