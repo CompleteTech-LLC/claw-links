@@ -8,7 +8,7 @@ param(
     [string]$BundleVersion,
     [string]$Platform = 'windows-x64',
     [string]$Architecture = 'x64',
-    [string]$UpstreamProductLine = 'stable',
+    [string]$UpstreamProductLine = 'esr',
     [string]$SourceRevision = 'unknown',
     [string]$ReleaseChannel = 'staging',
     [string]$DisplayName = 'Claw Browser',

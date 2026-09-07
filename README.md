@@ -126,9 +126,38 @@ Windows real bundle install:
 
 ```powershell
 .\packaging\windows\Install-WindowsBrowserBundle.ps1 `
-  -SourceArchivePath C:\path\to\claw-browser-win64.zip `
-  -BundleVersion 128.0.1-build1 `
-  -SourceRevision firefox-128.0.1esr
+  -SourceArchivePath C:\path\to\claw-browser-windows-x64-128.10.0esr-build1.zip `
+  -BundleVersion 128.10.0esr-build1 `
+  -SourceRevision FIREFOX_128_10_0esr_RELEASE
 ```
 
 For local packaging work, the same script can also install from an extracted bundle directory with `-SourceDirectoryPath`. Using an archive is preferred because `packageDigest` can then track the actual packaged artifact rather than falling back to the source executable hash.
+
+Current Windows release convention:
+
+- first tracked line: `esr`
+- bundle version format: `<upstreamVersion>-buildN`
+- example bundle version: `128.10.0esr-build1`
+
+Windows real bundle archive packaging:
+
+```powershell
+.\packaging\windows\New-WindowsBrowserArchive.ps1 `
+  -SourceDirectoryPath C:\path\to\prepared-browser-dir `
+  -BundleVersion 128.10.0esr-build1 `
+  -SourceRevision FIREFOX_128_10_0esr_RELEASE `
+  -RuntimeValidationMode strict
+```
+
+That produces the contract-compliant Windows ESR zip under `artifacts/release/windows/` plus a metadata sidecar for release/install handoff. Use `warning` mode for local non-Firefox stand-ins like the current stub, and `strict` for real Firefox-derived payloads.
+
+Windows Firefox ESR build orchestration:
+
+```powershell
+.\packaging\windows\Start-WindowsFirefoxEsrBuild.ps1 `
+  -SourceDirectoryPath C:\mozilla-source\firefox `
+  -BundleVersion 128.10.0esr-build1 `
+  -SourceRevision FIREFOX_128_10_0esr_RELEASE
+```
+
+That prepares a generated `mozconfig` plus a MozillaBuild-shell helper that runs `mach build`, `mach package`, and then packages the resulting `dist/firefox` directory into the Claw Links Windows ESR archive contract.
