@@ -3,7 +3,7 @@ param(
     [string]$BundleVersion = '0.0.0-stub',
     [string]$Platform = 'windows-x64',
     [string]$Architecture = 'x64',
-    [string]$UpstreamProductLine = 'stable',
+    [string]$UpstreamProductLine = 'esr',
     [string]$SourceRevision = 'stub-local',
     [string]$ReleaseChannel = 'stub'
 )

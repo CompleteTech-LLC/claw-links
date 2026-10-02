@@ -20,7 +20,8 @@ Status key:
 - [x] Bootstrap a deterministic managed profile on first run.
 - [x] Add a Windows browser bundle stub installer that writes `browser/bundle-manifest.json`.
 - [ ] Add a root `.sln` so repo-level `dotnet build` and `dotnet test` work cleanly.
-- [ ] Decide the release lane to track first: Firefox `stable` or `esr`.
+- [x] Decide the release lane to track first: Firefox `esr`.
+- [x] Adopt the Windows bundle version format `<upstreamVersion>-buildN`.
 
 ## P0 Launcher V1
 
@@ -52,6 +53,8 @@ Status key:
 
 - [x] Add a Windows stub packaging script for local validation.
 - [x] Add a Windows installer path for a prebuilt browser bundle archive or directory.
+- [x] Add a build-side Windows ESR archive packaging script.
+- [x] Add a Windows Firefox ESR build orchestration script.
 - [ ] Replace the Windows stub path with a real Firefox-derived packaging flow.
 - [ ] Add macOS packaging automation that outputs an app bundle and distributable artifact.
 - [ ] Add Linux packaging automation that outputs a tarball first.
@@ -106,7 +109,6 @@ Status key:
 
 ## Open Decisions
 
-- [ ] Choose the first tracked upstream line: `stable` or `esr`.
 - [ ] Choose the V1 update model.
 - [ ] Choose whether missing bundles should be installer-driven or launcher-fatal.
 - [ ] Choose the initial release artifact shape for each OS.
