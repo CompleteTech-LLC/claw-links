@@ -27,12 +27,12 @@ Why Firefox:
 
 ## Repo layout
 
-- [docs/architecture.md](/Users/timot/Documents/projects/discord-link/docs/architecture.md)
-- [docs/browser-bundle-layout.md](/Users/timot/Documents/projects/discord-link/docs/browser-bundle-layout.md)
-- [docs/firefox-build.md](/Users/timot/Documents/projects/discord-link/docs/firefox-build.md)
-- [docs/licensing-and-redistribution.md](/Users/timot/Documents/projects/discord-link/docs/licensing-and-redistribution.md)
-- [docs/windows-bundle-artifact.md](/Users/timot/Documents/projects/discord-link/docs/windows-bundle-artifact.md)
-- [config/firefox/policies.json](/Users/timot/Documents/projects/discord-link/config/firefox/policies.json)
+- [docs/architecture.md](docs/architecture.md)
+- [docs/browser-bundle-layout.md](docs/browser-bundle-layout.md)
+- [docs/firefox-build.md](docs/firefox-build.md)
+- [docs/licensing-and-redistribution.md](docs/licensing-and-redistribution.md)
+- [docs/windows-bundle-artifact.md](docs/windows-bundle-artifact.md)
+- [config/firefox/policies.json](config/firefox/policies.json)
 - `src/ClawLinks.Launcher/` - .NET launcher CLI scaffold
 - `tests/ClawLinks.Launcher.Tests/` - launcher unit tests
 
@@ -56,7 +56,7 @@ That gets us:
 
 ## Important note on naming
 
-Because a modified Firefox build cannot be redistributed under Mozilla trademarks without prior written permission, this project should assume a non-Firefox product name and non-Firefox branding from day one. Details are in [docs/licensing-and-redistribution.md](/Users/timot/Documents/projects/discord-link/docs/licensing-and-redistribution.md).
+Because a modified Firefox build cannot be redistributed under Mozilla trademarks without prior written permission, this project should assume a non-Firefox product name and non-Firefox branding from day one. Details are in [docs/licensing-and-redistribution.md](docs/licensing-and-redistribution.md).
 
 ## Next implementation steps
 
