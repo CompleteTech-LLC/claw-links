@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/banner.jpg" alt="A glowing chain link passing through a claw bracket and shield gateway into an isolated browser window cube, with circuit traces fanning out to three platform pedestals." width="100%"></p>
+
 # Claw Links
 
 `Claw Links` is a cross-platform launcher for opening Discord links in a managed, hardened Firefox lane instead of the user's normal browser session.
